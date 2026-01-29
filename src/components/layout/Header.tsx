@@ -6,8 +6,6 @@ import { useState } from 'react';
 
 const NAV_LINKS = [
   { name: 'Về chúng tôi', href: '#' },
-  { name: 'Điều khoản', href: '#' },
-  { name: 'Chính sách bảo mật', href: '#' },
   { name: 'Liên hệ', href: '#' },
 ];
 
