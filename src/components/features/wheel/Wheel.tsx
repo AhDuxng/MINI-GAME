@@ -1,31 +1,27 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
 
 interface WheelProps {
     segments: string[];
     isSpinning: boolean;
     onSpinEnd: () => void;
     rotation: number;
+    onSpinTrigger: () => void;
 }
 
-// Bảng màu rực rỡ để phân biệt các ô trên vòng quay
+// Bảng màu vàng/cam chủ đạo
 const COLORS = [
-    '#FF6B00', // Cam đậm
-    '#FFB000', // Vàng
-    '#eb4d4b', // Đỏ
-    '#6ab04c', // Xanh lá
-    '#22a6b3', // Xanh dương
-    '#be2edd', // Tím
-    '#f0932b', // Cam nhạt
-    '#30336b', // Xanh đậm
+    '#F97316',
+    '#FB923C',
+    '#F59E0B',
+    '#FCD34D',
 ];
 
-export default function Wheel({ segments, isSpinning, onSpinEnd, rotation }: WheelProps) {
-    const size = 300; // Kích thước SVG cố định
+export default function Wheel({ segments, isSpinning, onSpinEnd, rotation, onSpinTrigger }: WheelProps) {
+    const size = 480;
     const center = size / 2;
-    const radius = size / 2 - 10; // Khoảng cách đệm để không bị cắt viền
+    const radius = size / 2 - 24;
 
     // Tính tọa độ điểm trên đường tròn dựa trên phần trăm góc
     const getCoordinatesForPercent = (percent: number) => {
@@ -35,12 +31,15 @@ export default function Wheel({ segments, isSpinning, onSpinEnd, rotation }: Whe
     };
 
     return (
-        <div className="relative flex items-center justify-center">
-            {/* Mũi tên chỉ kết quả (Tam giác ngược) */}
-            <div className="absolute -top-6 z-10 text-gray-800 drop-shadow-md">
+        <div
+            className="relative flex items-center justify-center"
+            style={{ width: size, height: size }}
+        >
+            {/* Mũi tên chỉ kết quả (Tam giác) - Vị trí cố định phía trên */}
+            <div className="absolute -top-8 z-20 text-[#C2410C] drop-shadow-lg filter">
                 <svg
-                    width="40"
-                    height="40"
+                    width="60"
+                    height="60"
                     viewBox="0 0 24 24"
                     fill="currentColor"
                     xmlns="http://www.w3.org/2000/svg"
@@ -50,14 +49,24 @@ export default function Wheel({ segments, isSpinning, onSpinEnd, rotation }: Whe
                 </svg>
             </div>
 
+            {/* Viền ngoài trang trí (Golden Rim) */}
+            <div
+                className="absolute inset-0 rounded-full border-[12px] border-[#F59E0B] shadow-2xl"
+                style={{ width: size, height: size }}
+            ></div>
+            <div
+                className="absolute inset-2 rounded-full border-[4px] border-[#FFF7ED] opacity-30"
+                style={{ width: size - 16, height: size - 16 }}
+            ></div>
+
             {/* Container vòng quay có animation xoay */}
             <motion.div
-                className="relative overflow-hidden rounded-full shadow-2xl ring-4 ring-white"
-                style={{ width: size, height: size }}
+                className="relative overflow-hidden rounded-full font-bold uppercase text-white shadow-inner"
+                style={{ width: size - 24, height: size - 24 }} // Nhỏ hơn container outer rim
                 animate={{ rotate: rotation }}
                 transition={{
-                    duration: isSpinning ? 4 : 0, // Thời gian quay 4s
-                    ease: isSpinning ? [0.2, 0.8, 0, 1] : 'linear', // Hiệu ứng giảm tốc (cubic-bezier)
+                    duration: isSpinning ? 5 : 0, // Quay lâu hơn chút
+                    ease: isSpinning ? [0.25, 0.1, 0.25, 1] : 'linear', // Cubic bezier mượt
                     type: 'tween',
                 }}
                 onAnimationComplete={() => {
@@ -79,11 +88,12 @@ export default function Wheel({ segments, isSpinning, onSpinEnd, rotation }: Whe
                         // Flag xác định cung lớn hay nhỏ (SVG requirment)
                         const largeArcFlag = sliceAngle > 0.5 ? 1 : 0;
 
-                        // Dữ liệu đường dẫn SVG
+                        const r = size / 2; // Full radius trong coordinate system này
+
                         const pathData = [
-                            `M ${center} ${center}`,
-                            `L ${center + radius * startX} ${center + radius * startY}`,
-                            `A ${radius} ${radius} 0 ${largeArcFlag} 1 ${center + radius * endX} ${center + radius * endY}`,
+                            `M ${r} ${r}`,
+                            `L ${r + r * startX} ${r + r * startY}`,
+                            `A ${r} ${r} 0 ${largeArcFlag} 1 ${r + r * endX} ${r + r * endY}`,
                             'Z',
                         ].join(' ');
 
@@ -93,19 +103,28 @@ export default function Wheel({ segments, isSpinning, onSpinEnd, rotation }: Whe
 
                         return (
                             <g key={index}>
-                                <path d={pathData} fill={COLORS[index % COLORS.length]} stroke="white" strokeWidth="2" />
+                                <path
+                                    d={pathData}
+                                    fill={COLORS[index % COLORS.length]}
+                                    stroke="#FFF7ED"
+                                    strokeWidth="2"
+                                />
                                 <text
-                                    x={center + (radius * 0.65) * Math.cos(2 * Math.PI * textAngle)}
-                                    y={center + (radius * 0.65) * Math.sin(2 * Math.PI * textAngle)}
+                                    x={r + (r * 0.65) * Math.cos(2 * Math.PI * textAngle)}
+                                    y={r + (r * 0.65) * Math.sin(2 * Math.PI * textAngle)}
                                     fill="white"
-                                    fontSize="12"
+                                    fillOpacity="0.9"
+                                    fontSize="14"
                                     fontWeight="bold"
                                     textAnchor="middle"
                                     alignmentBaseline="middle"
-                                    transform={`rotate(${textRotationDeg + 90}, ${center + (radius * 0.65) * Math.cos(2 * Math.PI * textAngle)}, ${center + (radius * 0.65) * Math.sin(2 * Math.PI * textAngle)})`}
-                                    style={{ pointerEvents: 'none' }}
+                                    transform={`rotate(${textRotationDeg + 90}, ${r + (r * 0.65) * Math.cos(2 * Math.PI * textAngle)}, ${r + (r * 0.65) * Math.sin(2 * Math.PI * textAngle)})`}
+                                    style={{
+                                        pointerEvents: 'none',
+                                        textShadow: '0 1px 2px rgba(0,0,0,0.1)'
+                                    }}
                                 >
-                                    {segment.length > 10 ? segment.substring(0, 10) + '...' : segment}
+                                    {segment.length > 15 ? segment.substring(0, 15) + '...' : segment}
                                 </text>
                             </g>
                         );
@@ -113,13 +132,16 @@ export default function Wheel({ segments, isSpinning, onSpinEnd, rotation }: Whe
                 </svg>
             </motion.div>
 
-            {/* Nút trang trí ở giữa tâm vòng quay */}
-            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <div className="h-12 w-12 rounded-full bg-white shadow-md flex items-center justify-center">
-                    <div className="h-8 w-8 rounded-full bg-orange-500 flex items-center justify-center text-white">
-                        ★
-                    </div>
-                </div>
+            {/* Nút Quay ở giữa (Center Spin Button) */}
+            <div className="absolute inset-0 flex items-center justify-center z-30">
+                <button
+                    onClick={onSpinTrigger}
+                    disabled={isSpinning}
+                    className="relative flex h-20 w-20 items-center justify-center rounded-full border-4 border-white bg-[#EA580C] text-sm font-extrabold text-white shadow-xl transition-transform hover:scale-105 active:scale-95 disabled:cursor-not-allowed disabled:opacity-80"
+                >
+                    <div className="absolute inset-0 rounded-full border border-white/20"></div>
+                    QUAY
+                </button>
             </div>
         </div>
     );

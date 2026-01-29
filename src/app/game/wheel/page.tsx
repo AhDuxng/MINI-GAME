@@ -12,7 +12,7 @@ export default function WheelPage() {
             {/* Header cố định */}
             <Header />
 
-            <main className="flex-1 container mx-auto px-4 py-8 md:py-12">
+            <main className="flex-1 container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
                 {/* Nút quay lại trang chủ */}
                 <div className="mb-6">
                     <Link
@@ -26,11 +26,11 @@ export default function WheelPage() {
 
                 {/* Tiêu đề trang Game */}
                 <div className="mb-10 text-center">
-                    <h1 className="mb-2 text-3xl font-extrabold text-gray-900 md:text-4xl">
+                    <h1 className="mb-2 text-3xl font-semibold text-gray-900 md:text-4xl">
                         Vòng Quay May Mắn
                     </h1>
                     <p className="text-gray-500">
-                        Thử vận may, nhận quà liền tay! (Hoặc hình phạt 😈)
+                        Thử vận may, nhận quà! (Hoặc hình phạt)
                     </p>
                 </div>
 
