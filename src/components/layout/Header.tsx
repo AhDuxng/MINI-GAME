@@ -1,45 +1,29 @@
 ﻿'use client';
 
 import Link from 'next/link';
-import { Search, Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import { BiSearch, BiMenu, BiX } from 'react-icons/bi';
+import { FaGamepad } from 'react-icons/fa6';
 
 const NAV_LINKS = [
-  { name: 'Về chúng tôi', href: '#' },
-  { name: 'Liên hệ', href: '#' },
+  { name: 'Games Bàn Nhậu', href: '/game/dice' },
+  { name: 'Vòng Quay', href: '/game/wheel' },
+  { name: 'Trang chủ', href: '/' },
 ];
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-gray-100 bg-white shadow-sm">
+    <header className="sticky top-0 z-50 w-full glass border-b border-orange-200/50">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
-        {/* Left Side: Logo & Desktop Nav */}
+        {/* Logo */}
         <div className="flex items-center gap-8">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-orange-100 text-orange-600">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="lucide lucide-gamepad-2"
-              >
-                <line x1="6" x2="10" y1="12" y2="12" />
-                <line x1="8" x2="8" y1="10" y2="14" />
-                <line x1="15" x2="15.01" y1="13" y2="13" />
-                <line x1="18" x2="18.01" y1="11" y2="11" />
-                <rect width="20" height="12" x="2" y="6" rx="2" />
-              </svg>
+          <Link href="/" className="flex items-center gap-3 group">
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-button shadow-glow transition-all group-hover:scale-110 group-hover:shadow-glow-orange">
+              <FaGamepad className="h-5 w-5 text-white" />
             </div>
-            <span className="text-xl font-bold text-gray-900">VuiChơi</span>
+            <span className="text-xl font-bold text-orange-600">VuiChơi</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -48,7 +32,7 @@ export default function Header() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-sm font-medium text-gray-500 transition-colors hover:text-orange-600"
+                className="text-sm font-medium text-gray-600 hover:text-orange-600 transition-colors"
               >
                 {link.name}
               </Link>
@@ -56,16 +40,14 @@ export default function Header() {
           </nav>
         </div>
 
-        {/* Right Side: Search & Actions */}
-        <div className="flex items-center gap-3 sm:gap-4">
-          {/* Search Bar - hidden on mobile, compact on tablet */}
-          <div className="hidden md:block relative w-full max-w-xs lg:max-w-sm">
-            <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-              <Search className="h-4 w-4 text-gray-400" />
-            </div>
+        {/* Search & Actions */}
+        <div className="flex items-center gap-4">
+          {/* Search Bar */}
+          <div className="hidden md:block relative">
+            <BiSearch className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" />
             <input
               type="text"
-              className="block w-full rounded-full border-gray-200 bg-gray-50 py-2 pl-9 pr-4 text-sm text-gray-900 placeholder-gray-500 focus:border-orange-500 focus:bg-white focus:outline-none focus:ring-1 focus:ring-orange-500"
+              className="input-glass pl-10 pr-4 py-2 w-64 text-sm rounded-lg"
               placeholder="Tìm game..."
             />
           </div>
@@ -73,22 +55,22 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="rounded-lg p-2 text-gray-500 hover:bg-gray-100 lg:hidden"
+            className="glass-sm p-2 rounded-lg lg:hidden hover:bg-orange-100 transition-colors"
           >
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {isMenuOpen ? <BiX className="h-6 w-6 text-orange-600" /> : <BiMenu className="h-6 w-6 text-orange-600" />}
           </button>
         </div>
       </div>
 
-      {/* Mobile Menu Dropdown */}
+      {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="border-t border-gray-100 bg-white lg:hidden">
-          <nav className="flex flex-col space-y-1 p-4">
+        <div className="glass border-t border-orange-200/50 lg:hidden">
+          <nav className="flex flex-col p-4 space-y-2">
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className="rounded-lg px-4 py-3 text-base font-medium text-gray-700 hover:bg-orange-50 hover:text-orange-600"
+                className="px-4 py-3 rounded-lg text-gray-600 hover:text-orange-600 hover:bg-orange-50 transition-all"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.name}

@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { motion } from 'framer-motion';
 
@@ -122,3 +122,4 @@ export default function WheelMobile({ segments, isSpinning, onSpinEnd, rotation,
         </div>
     );
 }
+

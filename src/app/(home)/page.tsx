@@ -5,7 +5,7 @@ import GameList from '@/components/home/GameList';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white font-sans text-gray-900">
+    <div className="min-h-screen bg-animated">
       <Header />
       <main>
         <Hero />

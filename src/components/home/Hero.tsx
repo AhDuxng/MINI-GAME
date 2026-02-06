@@ -1,38 +1,41 @@
-import Image from 'next/image';
+﻿import Image from 'next/image';
+import { BsFire, BsPlayFill } from 'react-icons/bs';
 
 export default function Hero() {
     return (
         <section className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-            <div className="overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-gray-100">
+            <div className="glass-lg overflow-hidden rounded-3xl">
                 <div className="grid grid-cols-1 md:grid-cols-2">
+                    {/* Nội dung chính */}
                     <div className="flex flex-col justify-center px-6 py-8 sm:px-12 md:py-16 lg:px-16">
-                        <span className="mb-3 inline-flex w-fit items-center rounded-full bg-orange-100 px-3 py-1 text-xs font-semibold text-orange-600">
-                            🔥 Đang Hot Nhất
+                        <span className="mb-4 inline-flex w-fit items-center gap-2 rounded-full bg-gradient-button px-4 py-1.5 text-xs font-bold text-white shadow-glow">
+                            <BsFire className="h-3 w-3" /> Đang Hot
                         </span>
-                        <h1 className="mb-3 text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
+                        <h1 className="mb-4 text-3xl font-bold tracking-tight text-gray-800 sm:text-4xl lg:text-5xl">
                             Thật hay Thách - <br className="hidden lg:block" />
-                            Khuấy động cuộc vui!
+                            <span className="text-orange-600">
+                                Khuấy động cuộc vui!
+                            </span>
                         </h1>
-                        <p className="mb-6 text-sm text-gray-500 sm:text-base lg:text-lg">
+                        <p className="mb-8 text-sm text-gray-600 sm:text-base lg:text-lg">
                             Trò chơi nhóm thú vị nhất cho mọi bữa tiệc. Khám phá bí mật của bạn bè hoặc thực hiện những thử thách khó đỡ.
                         </p>
                         <div>
-                            <button className="inline-flex items-center justify-center rounded-full bg-orange-500 px-6 py-2.5 text-sm font-medium text-white shadow-sm transition-transform hover:scale-105 hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 active:scale-95 sm:px-8 sm:py-3 sm:text-base">
-                                ▶ Chơi ngay
+                            <button className="btn-glass inline-flex items-center gap-2 rounded-xl">
+                                <BsPlayFill className="h-5 w-5" /> Chơi ngay
                             </button>
                         </div>
                     </div>
 
-                    <div className="relative h-64 w-full bg-gray-100 md:h-full">
-                        {/* Placeholder for Hero Image */}
-                        <div className="absolute inset-0 flex items-center justify-center bg-gray-200 text-gray-400">
-                            <Image
-                                src="/assets/images/unnamed.webp"
-                                alt="Party Friends"
-                                fill
-                                className="object-cover"
-                            />
-                        </div>
+                    {/* Hình ảnh */}
+                    <div className="relative h-64 w-full md:h-full">
+                        <div className="absolute inset-0 bg-gradient-to-br from-orange-200/30 to-orange-300/30" />
+                        <Image
+                            src="/assets/images/unnamed.webp"
+                            alt="Party Friends"
+                            fill
+                            className="object-cover"
+                        />
                     </div>
                 </div>
             </div>

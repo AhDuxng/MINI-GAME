@@ -4,7 +4,76 @@
 
 @layer base {
   body {
-    @apply bg-white text-gray-900;
-    font-family: 'Inter', 'Roboto', sans-serif;
+    @apply bg-gradient-game min-h-screen text-gray-800;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+
+  /* Glass Card Effect - Light Theme */
+  .glass {
+    @apply bg-white/70 backdrop-blur-lg border border-orange-200/50 shadow-glass;
+  }
+
+  .glass-sm {
+    @apply bg-white/60 backdrop-blur-md border border-orange-200/40 shadow-glass-sm;
+  }
+
+  .glass-lg {
+    @apply bg-white/80 backdrop-blur-xl border border-orange-200/60 shadow-glass-lg;
+  }
+
+  /* Glass Button */
+  .btn-glass {
+    @apply px-6 py-3 rounded-xl bg-gradient-button text-white font-bold shadow-glow transition-all duration-300 hover:shadow-glow-orange hover:scale-105;
+  }
+
+  /* Glass Input */
+  .input-glass {
+    @apply w-full px-4 py-3 rounded-xl bg-white/80 backdrop-blur-md border border-orange-200 text-gray-800 placeholder-gray-400 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/30 transition-all duration-300;
+  }
+
+  /* Glow Text */
+  .text-glow {
+    text-shadow: 0 0 10px rgba(249, 115, 22, 0.3);
+  }
+
+  /* Animated Gradient Background - Light Theme */
+  .bg-animated {
+    background: linear-gradient(-45deg, #FFF7ED, #FFEDD5, #FED7AA, #FDBA74);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  /* Floating Animation */
+  .float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
   }
 }

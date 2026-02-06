@@ -1,28 +1,34 @@
-﻿import Link from 'next/link';
-import { Mail, Globe } from 'lucide-react';
+﻿import { FaGlobe, FaEnvelope, FaGamepad } from 'react-icons/fa6';
 
 export default function Footer() {
   return (
-    <footer className="mt-auto border-t border-gray-100 bg-white py-8">
+    <footer className="mt-auto glass border-t border-orange-200/50 py-8">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
-          <div className="flex flex-col gap-2">
-            <div className="flex items-center gap-2">
-              <div className="flex h-6 w-6 items-center justify-center rounded-lg bg-orange-100 text-orange-600">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-gamepad-2"><line x1="6" x2="10" y1="12" y2="12" /><line x1="8" x2="8" y1="10" y2="14" /><line x1="15" x2="15.01" y1="13" y2="13" /><line x1="18" x2="18.01" y1="11" y2="11" /><rect width="20" height="12" x="2" y="6" rx="2" /></svg>
-              </div>
-              <span className="text-lg font-bold text-gray-900">VuiChơi</span>
+          {/* Logo */}
+          <div className="flex items-center gap-3">
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-button shadow-glow">
+              <FaGamepad className="h-5 w-5 text-white" />
             </div>
-            <p className="text-xs text-gray-500">Nền tảng mini-game giải trí.</p>
+            <div>
+              <p className="font-bold text-orange-600">VuiChơi</p>
+              <p className="text-xs text-gray-500">Nền tảng mini game giải trí số 1</p>
+            </div>
           </div>
 
-          <div className="flex gap-4 text-gray-400">
-            <Globe className="h-5 w-5 hover:text-gray-600 cursor-pointer" />
-            <Mail className="h-5 w-5 hover:text-gray-600 cursor-pointer" />
+          {/* Social Links */}
+          <div className="flex gap-3">
+            <div className="glass-sm p-3 rounded-xl cursor-pointer hover:bg-orange-50 transition-all hover:scale-110">
+              <FaGlobe className="h-5 w-5 text-orange-500 hover:text-orange-600" />
+            </div>
+            <div className="glass-sm p-3 rounded-xl cursor-pointer hover:bg-orange-50 transition-all hover:scale-110">
+              <FaEnvelope className="h-5 w-5 text-orange-500 hover:text-orange-600" />
+            </div>
           </div>
         </div>
+
         <div className="mt-8 text-center text-xs text-gray-400">
-          © 2026 VuiChoi. All rights reserved.
+          © 2026 VuiChơi. All rights reserved.
         </div>
       </div>
     </footer>
