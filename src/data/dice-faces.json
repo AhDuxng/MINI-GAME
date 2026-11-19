@@ -1,1 +1,8 @@
-﻿[]
+[
+  { "id": 1, "label": "Cạn ly", "description": "Uống hết 100% ly", "icon": "beer", "ramp": 1 },
+  { "id": 2, "label": "Nửa ly", "description": "Uống 50% ly", "icon": "glass", "ramp": 0 },
+  { "id": 3, "label": "Nhấp môi", "description": "Chỉ uống 1 ngụm nhỏ", "icon": "droplet", "ramp": 6 },
+  { "id": 4, "label": "Chỉ định", "description": "Mời 1 người uống", "icon": "user", "ramp": 5 },
+  { "id": 5, "label": "Qua lượt", "description": "May mắn, bạn thoát!", "icon": "skip", "ramp": 8 },
+  { "id": 6, "label": "Đồng khởi", "description": "Tất cả cùng uống!", "icon": "users", "ramp": 3 }
+]

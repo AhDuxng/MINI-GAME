@@ -1,0 +1,20 @@
+[
+  {
+    "id": "easy",
+    "name": "Dễ",
+    "vip": false,
+    "words": ["Con mèo", "Cái ô", "Mặt trời", "Ngôi nhà", "Cây dừa", "Con cá", "Quả táo", "Xe đạp", "Cái ghế", "Bông hoa", "Kem ốc quế", "Con rắn", "Cầu vồng", "Cái kéo", "Máy bay", "Thuyền buồm", "Quả chuối", "Đôi giày", "Cái cốc", "Bánh sinh nhật", "Con bướm", "Đám mây", "Ngôi sao", "Chìa khoá", "Kính mắt", "Nón lá", "Con gà", "Quả dưa hấu", "Cái tivi", "Người tuyết", "Con nhện", "Ô tô", "Quả bóng", "Đồng hồ", "Con ốc sên", "Bút chì", "Hộp quà", "Con mực", "Cái thang", "Bóng đèn", "Quả trứng", "Cá voi", "Cái lược", "Con rùa", "Cây nấm"]
+  },
+  {
+    "id": "medium",
+    "name": "Vừa",
+    "vip": false,
+    "words": ["Đi xe đạp", "Câu cá", "Thả diều", "Đá bóng", "Ăn phở", "Đánh răng", "Ngủ trưa", "Tắm biển", "Leo núi", "Cắm trại", "Nướng thịt", "Gói bánh chưng", "Múa lân", "Đi chợ", "Kẹt xe", "Mưa rào", "Đám cưới", "Tiệc sinh nhật", "Người ngoài hành tinh", "Ma cà rồng", "Siêu nhân", "Nàng tiên cá", "Cướp biển", "Người máy", "Khủng long", "Kim tự tháp", "Tháp Eiffel", "Vịnh Hạ Long", "Trà sữa trân châu", "Nồi lẩu", "Chó đuổi mèo", "Gà gáy sáng", "Chim về tổ", "Sao băng", "Núi lửa phun", "Tuyết rơi", "Hoa anh đào", "Ông già Noel", "Đèn ông sao", "Lì xì ngày Tết", "Chơi xích đu", "Lướt sóng"]
+  },
+  {
+    "id": "idioms",
+    "name": "Thành ngữ",
+    "vip": true,
+    "words": ["Ăn cháo đá bát", "Nước đổ lá khoai", "Đàn gảy tai trâu", "Vẽ rắn thêm chân", "Ếch ngồi đáy giếng", "Cưỡi ngựa xem hoa", "Nước chảy đá mòn", "Mèo mù vớ cá rán", "Gậy ông đập lưng ông", "Cá lớn nuốt cá bé", "Thả hổ về rừng", "Mò kim đáy bể", "Đầu voi đuôi chuột", "Ăn quả nhớ kẻ trồng cây", "Nước đến chân mới nhảy", "Ngồi mát ăn bát vàng", "Cõng rắn cắn gà nhà", "Gà trống nuôi con", "Chuột sa chĩnh gạo", "Múa rìu qua mắt thợ", "Đứng núi này trông núi nọ", "Lên voi xuống chó", "Dã tràng xe cát", "Cá chậu chim lồng", "Như cá gặp nước", "Rung cây doạ khỉ", "Kiến tha lâu đầy tổ", "Ôm cây đợi thỏ", "Thuận buồm xuôi gió", "Mật ngọt chết ruồi", "Châu chấu đá xe", "Tre già măng mọc", "Chó treo mèo đậy", "Một nắng hai sương", "Đi một ngày đàng học một sàng khôn"]
+  }
+]

@@ -1,1 +1,30 @@
-﻿[]
+{
+  "funPrizes": [
+    { "label": "Uống 1 ly lấy hên" },
+    { "label": "Hát 1 bài chúc Tết" },
+    { "label": "Chúc may mắn lần sau" },
+    { "label": "Được rút thêm 1 bao", "extraTurn": true },
+    { "label": "Được chỉ định 1 người uống" },
+    { "label": "Kể 1 kỷ niệm đáng nhớ trong năm" }
+  ],
+  "wishes": [
+    "An khang thịnh vượng",
+    "Vạn sự như ý",
+    "Tấn tài tấn lộc",
+    "Sức khoẻ dồi dào",
+    "Tiền vào như nước",
+    "Năm mới phát tài",
+    "Học hành tấn tới",
+    "Công thành danh toại",
+    "Gia đình hạnh phúc",
+    "Mã đáo thành công",
+    "Tình duyên phơi phới",
+    "Cười nhiều hơn khóc",
+    "Lương tăng gấp đôi",
+    "Ăn không béo, tiêu không hết",
+    "Đi đâu cũng gặp may",
+    "Crush đổ cái rụp",
+    "Ngủ đến khi tự dậy",
+    "Ví lúc nào cũng căng phồng"
+  ]
+}

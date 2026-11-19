@@ -1,0 +1,238 @@
+{
+  "extends": "next/core-web-vitals",
+  "rules": {
+    "no-restricted-imports": [
+      "error",
+      {
+        "patterns": [
+          {
+            "group": [
+              "@/features/*/*",
+              "!@/features/*/server"
+            ],
+            "message": "Chỉ import feature qua public API: @/features/<tên>."
+          },
+          {
+            "group": [
+              "@/games/*/*",
+              "!@/games/*/server",
+              "!@/games/kit/three"
+            ],
+            "message": "Chỉ import game qua @/games/<tên>, @/games/kit, @/games/kit/three (phần 3D), hoặc @/games/<tên>/server trong Route Handler."
+          }
+        ]
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "src/app/**/*.tsx"
+      ],
+      "rules": {
+        "no-restricted-imports": [
+          "error",
+          {
+            "patterns": [
+              {
+                "group": [
+                  "@/features/*/*",
+                  "!@/features/*/server"
+                ],
+                "message": "Chỉ import feature qua public API: @/features/<tên>."
+              },
+              {
+                "group": [
+                  "@/games/*/*",
+                  "!@/games/*/server",
+                  "!@/games/kit/three"
+                ],
+                "message": "Chỉ import game qua @/games/<tên>, @/games/kit, @/games/kit/three (phần 3D), hoặc @/games/<tên>/server trong Route Handler."
+              },
+              {
+                "group": [
+                  "@/features/*/server",
+                  "@/games/*/server"
+                ],
+                "message": "Phần server chỉ dùng trong Route Handler (route.ts)."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "files": [
+        "src/shared/**"
+      ],
+      "rules": {
+        "no-restricted-imports": [
+          "error",
+          {
+            "patterns": [
+              {
+                "group": [
+                  "@/features",
+                  "@/features/*",
+                  "@/games",
+                  "@/games/*",
+                  "@/layout",
+                  "@/layout/*",
+                  "@/app",
+                  "@/app/*"
+                ],
+                "message": "shared là tầng dưới cùng, không được phụ thuộc feature, game, layout hay route."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "files": [
+        "src/features/**"
+      ],
+      "rules": {
+        "no-restricted-imports": [
+          "error",
+          {
+            "patterns": [
+              {
+                "group": [
+                  "@/features/*/*",
+                  "!@/features/*/server"
+                ],
+                "message": "Chỉ import feature khác qua public API: @/features/<tên>."
+              },
+              {
+                "group": [
+                  "@/features/*/server"
+                ],
+                "message": "Phần server của feature chỉ dùng trong Route Handler."
+              },
+              {
+                "group": [
+                  "@/games",
+                  "@/games/*",
+                  "@/layout",
+                  "@/layout/*",
+                  "@/app",
+                  "@/app/*"
+                ],
+                "message": "Feature không được phụ thuộc game, layout hay route."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "files": [
+        "src/features/auth/**",
+        "src/features/catalog/**",
+        "src/features/players/**",
+        "src/features/settings/**"
+      ],
+      "rules": {
+        "no-restricted-imports": [
+          "error",
+          {
+            "patterns": [
+              {
+                "group": [
+                  "@/features",
+                  "@/features/*"
+                ],
+                "message": "Feature lá không phụ thuộc feature khác; trong cùng feature dùng đường dẫn tương đối."
+              },
+              {
+                "group": [
+                  "@/games",
+                  "@/games/*",
+                  "@/layout",
+                  "@/layout/*",
+                  "@/app",
+                  "@/app/*"
+                ],
+                "message": "Feature không được phụ thuộc game, layout hay route."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "files": [
+        "src/games/**"
+      ],
+      "rules": {
+        "no-restricted-imports": [
+          "error",
+          {
+            "patterns": [
+              {
+                "group": [
+                  "@/features/*/*"
+                ],
+                "message": "Chỉ import feature qua public API: @/features/<tên>."
+              },
+              {
+                "group": [
+                  "@/games/*/*",
+                  "@/games/*",
+                  "!@/games/kit",
+                  "!@/games/kit/three"
+                ],
+                "message": "Game không import game khác; dùng chung qua @/games/kit (phần 3D ở @/games/kit/three), trong cùng game dùng đường dẫn tương đối."
+              },
+              {
+                "group": [
+                  "@/layout",
+                  "@/layout/*",
+                  "@/app",
+                  "@/app/*"
+                ],
+                "message": "Game không được phụ thuộc layout hay route."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "files": [
+        "src/layout/**"
+      ],
+      "rules": {
+        "no-restricted-imports": [
+          "error",
+          {
+            "patterns": [
+              {
+                "group": [
+                  "@/features/*/*"
+                ],
+                "message": "Chỉ import feature qua public API: @/features/<tên>."
+              },
+              {
+                "group": [
+                  "@/games/*/*",
+                  "@/games",
+                  "@/games/*"
+                ],
+                "message": "Layout không phụ thuộc game cụ thể."
+              },
+              {
+                "group": [
+                  "@/app",
+                  "@/app/*"
+                ],
+                "message": "Layout không được phụ thuộc route."
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
