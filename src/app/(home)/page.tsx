@@ -1,17 +1,18 @@
-﻿import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
-import Hero from '@/components/home/Hero';
-import GameList from '@/components/home/GameList';
+// Trang chủ cổng game: banner nổi bật, chơi gần đây, kho trò chơi theo thể loại, quảng bá VIP và hướng dẫn nhanh
+import { Suspense } from 'react';
+import { ContinuePlaying, GameBrowser, Hero, HowItWorks } from '@/features/catalog';
+import { VipBanner } from '@/features/billing';
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="min-h-screen bg-animated">
-      <Header />
-      <main>
-        <Hero />
-        <GameList />
-      </main>
-      <Footer />
-    </div>
+    <>
+      <Hero />
+      <ContinuePlaying />
+      <Suspense>
+        <GameBrowser />
+      </Suspense>
+      <VipBanner />
+      <HowItWorks />
+    </>
   );
 }
