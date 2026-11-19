@@ -1,0 +1,50 @@
+[
+  {
+    "id": "animals",
+    "name": "Động vật",
+    "vip": false,
+    "words": ["Con mèo", "Con chó", "Con gà trống", "Con vịt", "Con lợn", "Con trâu", "Con bò sữa", "Con ngựa", "Con dê", "Con khỉ", "Con voi", "Con hổ", "Con sư tử", "Con gấu trúc", "Con hươu cao cổ", "Con cá sấu", "Con rắn", "Con ếch", "Con rùa", "Con thỏ", "Con chuột", "Con sóc", "Con cú mèo", "Con đại bàng", "Chim cánh cụt", "Cá heo", "Cá mập", "Con bạch tuộc", "Con cua", "Con tôm hùm", "Con ốc sên", "Con bướm", "Con ong", "Con muỗi", "Con kiến", "Con chuồn chuồn", "Con kangaroo", "Con lạc đà", "Con tắc kè", "Con công"]
+  },
+  {
+    "id": "food",
+    "name": "Món ăn Việt",
+    "vip": false,
+    "words": ["Phở bò", "Bún chả", "Bánh mì", "Bánh xèo", "Gỏi cuốn", "Chả giò", "Cơm tấm", "Bún bò Huế", "Mì Quảng", "Hủ tiếu", "Bánh cuốn", "Xôi gà", "Bánh chưng", "Bánh tét", "Chè ba màu", "Trà sữa trân châu", "Cà phê sữa đá", "Nước mía", "Bánh tráng trộn", "Ốc luộc", "Lẩu thái", "Bún đậu mắm tôm", "Cháo lòng", "Trứng vịt lộn", "Bánh bao", "Bánh flan", "Sữa chua nếp cẩm", "Kem que", "Bánh trung thu", "Mứt dừa", "Canh chua cá", "Cá kho tộ", "Thịt kho trứng", "Rau muống xào tỏi", "Nem chua", "Bánh căn", "Bò lá lốt", "Cơm cháy chà bông"]
+  },
+  {
+    "id": "jobs",
+    "name": "Nghề nghiệp",
+    "vip": false,
+    "words": ["Bác sĩ", "Y tá", "Giáo viên", "Cảnh sát giao thông", "Lính cứu hoả", "Đầu bếp", "Thợ cắt tóc", "Ca sĩ", "Diễn viên hài", "Phi công", "Tiếp viên hàng không", "Tài xế xe ôm", "Shipper", "Thợ điện", "Thợ sửa xe", "Nông dân", "Ngư dân", "Kỹ sư xây dựng", "Lập trình viên", "Nhiếp ảnh gia", "Phóng viên", "MC đám cưới", "Bảo vệ", "Luật sư", "Thẩm phán", "Nha sĩ", "Bác sĩ thú y", "Phi hành gia", "Ảo thuật gia", "Huấn luyện viên thể hình", "Thủ môn", "Trọng tài", "Streamer", "Người mẫu", "Hoạ sĩ", "Thợ may", "Lao công", "Thợ lặn"]
+  },
+  {
+    "id": "things",
+    "name": "Đồ vật",
+    "vip": false,
+    "words": ["Cái ô", "Bàn chải đánh răng", "Điện thoại", "Cái gương", "Đồng hồ báo thức", "Máy sấy tóc", "Nồi cơm điện", "Quạt trần", "Điều khiển tivi", "Bàn là", "Cái chổi", "Chùm chìa khoá", "Kính râm", "Mũ bảo hiểm", "Xe đạp", "Bật lửa", "Đôi đũa", "Cái thớt", "Sạc dự phòng", "Tai nghe", "Cái gối", "Chăn bông", "Bình nước", "Cái kéo", "Băng dính", "Kẹp tóc", "Ví tiền", "Ba lô", "Đèn pin", "Cái võng", "Bếp ga", "Tủ lạnh", "Máy giặt", "Bàn phím", "Chuột máy tính", "Nón lá", "Cây lau nhà", "Bình hoa"]
+  },
+  {
+    "id": "actions",
+    "name": "Diễn tả hành động",
+    "vip": false,
+    "words": ["Đánh răng", "Gội đầu", "Bơi ếch", "Nhảy dây", "Chạy bộ", "Đá bóng", "Đánh cầu lông", "Câu cá", "Chèo thuyền", "Lái xe máy", "Đạp xe", "Thái hành", "Rửa bát", "Phơi quần áo", "Quét nhà", "Chụp ảnh tự sướng", "Hát karaoke", "Đánh trống", "Chơi đàn guitar", "Múa ba lê", "Tập yoga", "Ngủ gật", "Ngáp dài", "Hắt xì hơi", "Khóc nhè", "Cười sặc sụa", "Ăn mì cay", "Thổi nến sinh nhật", "Gói quà", "Trèo cây", "Bắt muỗi", "Lướt điện thoại", "Xỏ kim", "Kéo co", "Đánh võ", "Tắm cho chó"]
+  },
+  {
+    "id": "places",
+    "name": "Địa danh Việt Nam",
+    "vip": false,
+    "words": ["Hồ Gươm", "Vịnh Hạ Long", "Phố cổ Hội An", "Chợ Bến Thành", "Chùa Một Cột", "Cầu Rồng Đà Nẵng", "Đà Lạt", "Sa Pa", "Phú Quốc", "Mũi Né", "Nha Trang", "Đại Nội Huế", "Tràng An", "Động Phong Nha", "Ruộng bậc thang Mù Cang Chải", "Hà Giang", "Côn Đảo", "Vũng Tàu", "Chợ nổi Cái Răng", "Nhà thờ Đức Bà", "Dinh Độc Lập", "Văn Miếu", "Phố đi bộ Nguyễn Huệ", "Hồ Tây", "Đảo Lý Sơn", "Quy Nhơn", "Đảo Cát Bà", "Cột cờ Lũng Cú", "Mũi Cà Mau", "Nhà hát Lớn Hà Nội", "Tháp Chàm Ponagar", "Đồi cát bay", "Cầu Long Biên", "Bến Nhà Rồng"]
+  },
+  {
+    "id": "genz",
+    "name": "Ngôn ngữ Gen Z",
+    "vip": true,
+    "words": ["Flex", "Chill", "Crush", "Thả thính", "Seen không rep", "Toang", "Gét gô", "Khum", "Ét o ét", "Phông bạt", "Trà xanh", "Cà khịa", "Lầy lội", "Ủa alo", "Red flag", "Healing", "Deadline dí", "Sống ảo", "Hóng biến", "Tấu hài", "Cháy phố", "Đu idol", "Gánh team", "Xõa", "Quay xe", "Ngáo ngơ", "Ô dề", "Vô tri"]
+  },
+  {
+    "id": "nhau",
+    "name": "Bàn nhậu",
+    "vip": true,
+    "words": ["Trăm phần trăm", "Một hai ba dô", "Cạn ly", "Say quắc cần câu", "Mồi nhậu", "Lạc rang", "Khô mực nướng", "Chân gà nướng", "Nem chua rán", "Bia hơi", "Rượu đế", "Gắp đá", "Nói đạo lý", "Đòi về sớm", "Vợ gọi về", "Nhậu vỉa hè", "Karaoke sau nhậu", "Hát bolero", "Kể chuyện ngày xưa", "Uống né", "Chia tiền", "Ai trả tiền", "Ốc hút", "Lẩu dê", "Cụng ly", "Tửu lượng", "Gọi thêm két nữa", "Ngủ quên trên bàn"]
+  }
+]

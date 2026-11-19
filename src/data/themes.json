@@ -1,1 +1,7 @@
-﻿[]
+[
+  { "id": "spectrum", "name": "Cầu vồng", "stops": [0, 1, 2, 3, 4, 5, 6, 7, 8] },
+  { "id": "warm", "name": "Nắng ấm", "stops": [0, 1, 2, 3, 4] },
+  { "id": "cool", "name": "Biển đêm", "stops": [4, 5, 6, 7, 8] },
+  { "id": "sunset", "name": "Hoàng hôn", "stops": [1, 2, 3, 5] },
+  { "id": "lagoon", "name": "Đầm sen", "stops": [4, 6, 7, 8] }
+]

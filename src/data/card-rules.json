@@ -1,0 +1,67 @@
+[
+  {
+    "rank": "A",
+    "title": "Thác nước",
+    "rule": "Cả bàn cùng nâng ly uống, người rút bắt đầu trước. Chỉ được dừng khi người ngồi ngay trước mình đã dừng."
+  },
+  {
+    "rank": "2",
+    "title": "Chỉ định",
+    "rule": "Chọn một người bất kỳ trong bàn uống một ngụm."
+  },
+  {
+    "rank": "3",
+    "title": "Tự xử",
+    "rule": "Người rút lá này tự uống một ngụm."
+  },
+  {
+    "rank": "4",
+    "title": "Chạm đất",
+    "rule": "Cả bàn chạm tay xuống sàn, ai chạm chậm nhất thì uống."
+  },
+  {
+    "rank": "5",
+    "title": "Các anh",
+    "rule": "Tất cả các bạn nam trong bàn cùng uống một ngụm."
+  },
+  {
+    "rank": "6",
+    "title": "Các chị",
+    "rule": "Tất cả các bạn nữ trong bàn cùng uống một ngụm."
+  },
+  {
+    "rank": "7",
+    "title": "Giơ tay lên trời",
+    "rule": "Cả bàn giơ tay lên trời, ai giơ chậm nhất thì uống."
+  },
+  {
+    "rank": "8",
+    "title": "Bạn nhậu",
+    "rule": "Chọn một người làm bạn nhậu: từ giờ bạn uống thì người đó uống theo, cho tới khi có người rút lá 8 khác."
+  },
+  {
+    "rank": "9",
+    "title": "Vần điệu",
+    "rule": "Nói một từ, lần lượt từng người nói từ cùng vần. Ai bí hoặc nói lặp thì uống."
+  },
+  {
+    "rank": "10",
+    "title": "Chủ đề",
+    "rule": "Chọn một chủ đề như món nhậu, cầu thủ, bài hát. Lần lượt kể tên, ai bí thì uống."
+  },
+  {
+    "rank": "J",
+    "title": "Ra luật",
+    "rule": "Đặt một luật mới cho cả bàn tới hết ván, ví dụ cấm gọi tên. Ai phạm luật thì uống."
+  },
+  {
+    "rank": "Q",
+    "title": "Hỏi xoáy",
+    "rule": "Hỏi bất kỳ ai một câu, người đó phải hỏi lại người khác. Ai lỡ trả lời hoặc bí câu hỏi thì uống."
+  },
+  {
+    "rank": "K",
+    "title": "Ly chung",
+    "rule": "Rót một ít đồ uống của bạn vào ly chung giữa bàn. Ai rút lá K thứ tư phải cạn ly chung."
+  }
+]
